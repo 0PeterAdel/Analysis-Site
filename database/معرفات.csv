@@ -1,0 +1,15 @@
+﻿التصنيف ,الحالة,الإدارات المعنية بالاغلاق,مؤشرات التدقيق على المقاولين,تصنيف الحادث,تبعية الحادث
+عالي - High,مفتوح - Open,المشاريع - Project,"Excellent
+ممتثل",Near miss,NWC Employees incidents
+متوسط - Medium,مغلق - Close,الخدمات العامة والمرافق - General Services & Facilities ,"Good
+إمتثال جزئ",First Aid,Contractors incidents
+منخفض - Low,,المستودعات - Warehouse,"Poor
+إمتثال ضعيف",MTC,Other incidents
+,,العقد طويل الأجل - LOTM,"Not Implemented
+غير ممتثل",RWC,
+,,تشغيل وصيانة المياه - Water O&M,,LTI,
+,,تشغيل وصيانة الخدمات البيئية - ES O&M,,Fatal,
+,,تشغيل وصيانة المحافظات - MK Directorates,,Fire accident,
+,,إدارة التوصيلات المنزلية - House Connections,,Chemical leakage,
+,,إدارة المختبر - Laboratory,,Environmental Cases,
+,,أخرى - Other,,Property Damage,
