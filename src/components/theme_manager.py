@@ -10,50 +10,7 @@ from datetime import datetime
 class ThemeManager:
     """Advanced theme management system"""
     
-    de            /* Sidebar Styling */
-            .css-1d391kg {
-                background-color: var(--sidebar-bg);
-            }
-
-            /* Force white text in sidebar for all themes */
-            [data-testid="stSidebar"] {
-                color: #ffffff !important;
-            }
-            
-            [data-testid="stSidebar"] .st-emotion-cache-ue6h4q,
-            [data-testid="stSidebar"] .st-emotion-cache-16idsys p,
-            [data-testid="stSidebar"] .st-emotion-cache-pkbazv,
-            [data-testid="stSidebar"] .st-emotion-cache-10trblm,
-            [data-testid="stSidebar"] .st-emotion-cache-16idsys,
-            [data-testid="stSidebar"] .stMarkdown,
-            [data-testid="stSidebar"] .stSelectbox,
-            [data-testid="stSidebar"] .stMultiSelect,
-            [data-testid="stSidebar"] .stButton,
-            [data-testid="stSidebar"] label,
-            [data-testid="stSidebar"] .streamlit-expanderHeader {
-                color: #ffffff !important;
-            }
-
-            /* Sidebar headings */
-            [data-testid="stSidebar"] h1,
-            [data-testid="stSidebar"] h2,
-            [data-testid="stSidebar"] h3,
-            [data-testid="stSidebar"] h4,
-            [data-testid="stSidebar"] h5,
-            [data-testid="stSidebar"] h6 {
-                color: #ffffff !important;
-            }
-
-            /* Sidebar links */
-            [data-testid="stSidebar"] a {
-                color: #ffffff !important;
-            }
-
-            /* Sidebar input text */
-            [data-testid="stSidebar"] input,
-            [data-testid="stSidebar"] .stTextInput > div {
-                color: #ffffff !important;
-            }init__(self):
+    def __init__(self):
         self.themes = {
             'light': {
                 'name': 'Light Theme',
@@ -297,46 +254,6 @@ class ThemeManager:
             /* Sidebar Styling */
             .css-1d391kg {{
                 background-color: var(--sidebar-bg);
-            }}
-
-            /* Force white text in sidebar for all themes */
-            [data-testid="stSidebar"] {{
-                color: #ffffff !important;
-            }}
-            
-            [data-testid="stSidebar"] .st-emotion-cache-ue6h4q,
-            [data-testid="stSidebar"] .st-emotion-cache-16idsys p,
-            [data-testid="stSidebar"] .st-emotion-cache-pkbazv,
-            [data-testid="stSidebar"] .st-emotion-cache-10trblm,
-            [data-testid="stSidebar"] .st-emotion-cache-16idsys,
-            [data-testid="stSidebar"] .stMarkdown,
-            [data-testid="stSidebar"] .stSelectbox,
-            [data-testid="stSidebar"] .stMultiSelect,
-            [data-testid="stSidebar"] .stButton,
-            [data-testid="stSidebar"] label,
-            [data-testid="stSidebar"] .streamlit-expanderHeader {{
-                color: #ffffff !important;
-            }}
-
-            /* Sidebar headings */
-            [data-testid="stSidebar"] h1,
-            [data-testid="stSidebar"] h2,
-            [data-testid="stSidebar"] h3,
-            [data-testid="stSidebar"] h4,
-            [data-testid="stSidebar"] h5,
-            [data-testid="stSidebar"] h6 {{
-                color: #ffffff !important;
-            }}
-
-            /* Sidebar links */
-            [data-testid="stSidebar"] a {{
-                color: #ffffff !important;
-            }}
-
-            /* Sidebar input text */
-            [data-testid="stSidebar"] input,
-            [data-testid="stSidebar"] .stTextInput > div {{
-                color: #ffffff !important;
             }}
 
             /* Enhanced sidebar text visibility */

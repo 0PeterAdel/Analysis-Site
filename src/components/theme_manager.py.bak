@@ -15,86 +15,69 @@ class ThemeManager:
             'light': {
                 'name': 'Light Theme',
                 'icon': '☀️',
+            [data-testid="stSidebar"] .st-emotion-cache-ue6h4q,
+            [data-testid="stSidebar"] .st-emotion-cache-16idsys p,
+            [data-testid="stSidebar"] .st-emotion-cache-pkbazv,
+            [data-testid="stSidebar"] .st-emotion-cache-10trblm,
+            [data-testid="stSidebar"] .st-emotion-cache-16idsys,
+            [data-testid="stSidebar"] .stMarkdown,
+            [data-testid="stSidebar"] .stSelectbox,
+            [data-testid="stSidebar"] .stMultiSelect,
+            [data-testid="stSidebar"] .stButton,
+            [data-testid="stSidebar"] label,
+            [data-testid="stSidebar"] .streamlit-expanderHeader {
+                color: #ffffff !important;
+            }
+
+            /* Sidebar headings */
+            [data-testid="stSidebar"] h1,
+            [data-testid="stSidebar"] h2,
+            [data-testid="stSidebar"] h3,
+            [data-testid="stSidebar"] h4,
+            [data-testid="stSidebar"] h5,
+            [data-testid="stSidebar"] h6 {
+                color: #ffffff !important;
+            }
+
+            /* Sidebar links */
+            [data-testid="stSidebar"] a {
+                color: #ffffff !important;
+            }
+
+            /* Sidebar input text */
+            [data-testid="stSidebar"] input,
+            [data-testid="stSidebar"] .stTextInput > div {
+                color: #ffffff !important;
+            }init__(self):
+        self.themes = {
+            'light': {
+                'name': 'Light Theme',
+                'icon': '☀️',
                 'primary_color': '#1f77b4',
                 'secondary_color': '#ff7f0e',
                 'success_color': '#2ca02c',
                 'warning_color': '#d62728',
-                background: var(--secondary-color);
-            }
-            
-            /* Chart Text Styling */
-            .st-emotion-cache-1inwz65 text {
-                fill: var(--chart-text) !important;
-            }
-            
-            .st-emotion-cache-1inwz65 .tick text {
-                fill: var(--chart-text) !important;
-            }
-            
-            .st-emotion-cache-1inwz65 .axis-label {
-                fill: var(--chart-text) !important;
-            }
-            
-            /* Ensure contrast for trend indicators */
-            .trend-indicator {
-                color: var(--metric-text);
-                font-weight: bold;
-            }
-            
-            /* Ensure contrast for compliance rates */
-            .compliance-rate {
-                color: var(--metric-text);
-                font-weight: bold;
-                text-shadow: 0px 0px 2px rgba(0,0,0,0.2);
-            }
-            
-            /* High contrast text overlays */
-            .metric-overlay {
-                color: var(--metric-text);
-                font-weight: bold;
-                padding: 4px 8px;
-                border-radius: 4px;
-                background: rgba(0, 0, 0, 0.1);
-            }
-            
-            .dark .metric-overlay {
-                background: rgba(255, 255, 255, 0.1);
-            }
-            
-            /* Chart container background */
-            .st-emotion-cache-1inwz65 {
-                background: var(--surface-color);
-                padding: 1rem;
-                border-radius: 8px;
-                border: 1px solid var(--border-color);
-            }
-        </style>
-        """': '#d62728',
                 'info_color': '#9467bd',
                 'background_color': '#ffffff',
                 'surface_color': '#f8f9fa',
-                'text_color': '#212529',
-                'text_secondary': '#6c757d',
+                'text_color': '#000000',
+                'text_secondary': '#1a1a1a',
                 'text_on_primary': '#ffffff',
-                'text_on_secondary': '#ffffff',
-                'text_on_success': '#ffffff',
-                'text_on_warning': '#ffffff',
-                'text_on_info': '#ffffff',
-                'text_on_light': '#212529',
+                'text_on_secondary': '#000000',
+                'text_on_success': '#000000',
+                'text_on_warning': '#000000',
+                'text_on_info': '#000000',
+                'text_on_light': '#000000',
                 'text_on_dark': '#ffffff',
-                'chart_text': '#212529',
-                'metric_text': '#212529',
+                'chart_text': '#000000',
+                'metric_text': '#000000',
                 'border_color': '#dee2e6',
                 'shadow': '0 4px 6px rgba(0,0,0,0.1)',
                 'gradient_primary': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
                 'gradient_secondary': 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
                 'gradient_success': 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
                 'card_bg': 'linear-gradient(135deg, #f0f2f6 0%, #e8ecf0 100%)',
-                'sidebar_bg': '#f8f9fa',
-                'chart_text': '#000000',
-                'metric_text': '#000000',
-                'text_on_dark': '#ffffff',
-                'text_on_light': '#000000'
+                'sidebar_bg': '#f8f9fa'
             },
             'dark': {
                 'name': 'Dark Theme',
@@ -123,51 +106,7 @@ class ThemeManager:
                 'gradient_secondary': 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
                 'gradient_success': 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
                 'card_bg': 'linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%)',
-                'sidebar_bg': '#1a1a1a',
-                'chart_text': '#ffffff',
-                'metric_text': '#ffffff',
-                'text_on_dark': '#ffffff',
-                'text_on_light': '#000000'
-            },
-            'blue': {
-                'name': 'Ocean Blue',
-                'icon': '🌊',
-                'primary_color': '#0077be',
-                'secondary_color': '#00a8cc',
-                'success_color': '#00c851',
-                'warning_color': '#ff8800',
-                'info_color': '#33b5e5',
-                'background_color': '#f0f8ff',
-                'surface_color': '#e6f3ff',
-                'text_color': '#1a1a1a',
-                'text_secondary': '#4a4a4a',
-                'border_color': '#b3d9ff',
-                'shadow': '0 4px 6px rgba(0,119,190,0.2)',
-                'gradient_primary': 'linear-gradient(135deg, #0077be 0%, #00a8cc 100%)',
-                'gradient_secondary': 'linear-gradient(135deg, #33b5e5 0%, #0077be 100%)',
-                'gradient_success': 'linear-gradient(135deg, #00c851 0%, #00a8cc 100%)',
-                'card_bg': 'linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%)',
-                'sidebar_bg': '#e6f3ff'
-            },
-            'green': {
-                'name': 'Nature Green',
-                'icon': '🌿',
-                'primary_color': '#2e7d32',
-                'secondary_color': '#66bb6a',
-                'success_color': '#4caf50',
-                'warning_color': '#ff9800',
-                'info_color': '#00bcd4',
-                'background_color': '#f1f8e9',
-                'surface_color': '#e8f5e8',
-                'text_color': '#1b5e20',
-                'text_secondary': '#388e3c',
-                'border_color': '#c8e6c9',
-                'shadow': '0 4px 6px rgba(46,125,50,0.2)',
-                'gradient_primary': 'linear-gradient(135deg, #2e7d32 0%, #66bb6a 100%)',
-                'gradient_secondary': 'linear-gradient(135deg, #4caf50 0%, #8bc34a 100%)',
-                'gradient_success': 'linear-gradient(135deg, #66bb6a 0%, #4caf50 100%)',
-                'card_bg': 'linear-gradient(135deg, #f1f8e9 0%, #e8f5e8 100%)',
-                'sidebar_bg': '#e8f5e8'
+                'sidebar_bg': '#1a1a1a'
             }
         }
         
@@ -260,6 +199,89 @@ class ThemeManager:
                 --card-bg: {theme['card_bg']};
                 --sidebar-bg: {theme['sidebar_bg']};
             }}
+
+            /* Ensure dark text in light theme for all streamlit elements */
+            .light-theme .stMarkdown,
+            .light-theme .stText,
+            .light-theme .stMetric,
+            .light-theme .stDataFrame,
+            .light-theme .stTable,
+            .light-theme .stTabs,
+            .light-theme .stTab,
+            .light-theme .stSelectbox,
+            .light-theme .stMultiSelect,
+            .light-theme .stRadio,
+            .light-theme .stCheckbox,
+            .light-theme .stTextInput,
+            .light-theme .stTextArea,
+            .light-theme .stDateInput,
+            .light-theme .stTimeInput,
+            .light-theme .stNumberInput,
+            .light-theme .stFileUploader,
+            .light-theme .stProgress,
+            .light-theme .stAlert,
+            .light-theme .stError,
+            .light-theme .stWarning,
+            .light-theme .stInfo,
+            .light-theme .stSuccess {{
+                color: {theme['text_color']} !important;
+            }}
+
+            /* Light theme specific enhancements for text visibility */
+            .stApp.light {{
+                --text-color-normal: {theme['text_color']};
+                --text-color-muted: {theme['text_secondary']};
+            }}
+
+            /* Enhanced visibility for alerts and messages */
+            .element-container .stAlert {{
+                color: {theme['text_color']} !important;
+                font-weight: 500 !important;
+            }}
+
+            /* Make text in charts and visualizations more visible */
+            .st-emotion-cache-1inwz65 .plot-container text {{
+                fill: {theme['chart_text']} !important;
+                font-weight: 600 !important;
+                color: {theme['chart_text']} !important;
+            }}
+
+            /* Ensure visibility of error messages */
+            .stException,
+            .stError {{
+                color: {theme['warning_color']} !important;
+                font-weight: 500 !important;
+            }}
+
+            /* Enhance visibility of info messages */
+            .stInfo {{
+                color: {theme['info_color']} !important;
+                font-weight: 500 !important;
+            }}
+
+            /* DataFrames and tables text visibility */
+            .dataframe td,
+            .dataframe th {{
+                color: {theme['text_color']} !important;
+            }}
+
+            /* Better visibility for tabs and navigation */
+            .stTabs [role="tab"][aria-selected="true"] {{
+                color: {theme['primary_color']} !important;
+                font-weight: 600 !important;
+            }}
+
+            /* Section headers and titles */
+            h1, h2, h3, h4, h5, h6 {{
+                color: {theme['text_color']} !important;
+                font-weight: 600 !important;
+            }}
+
+            /* Enhanced text contrast for buttons */
+            .stButton button {{
+                color: {theme['text_color']} !important;
+                font-weight: 500 !important;
+            }}
             
             /* Main App Background */
             .stApp {{
@@ -268,8 +290,94 @@ class ThemeManager:
             }}
             
             /* Sidebar Styling */
-            .css-1d391kg {{
+            [class*="css-1d391kg"] {{
                 background-color: var(--sidebar-bg);
+            }}
+            
+            /* Force white text in sidebar */
+            [data-testid="stSidebar"] {{
+                color: #ffffff !important;
+            }}
+            
+            [data-testid="stSidebar"] div {{
+                color: #ffffff !important;
+            }}
+            
+            [data-testid="stSidebar"] label {{
+                color: #ffffff !important;
+            }}
+            
+            [data-testid="stSidebar"] .st-emotion-cache-ue6h4q,
+            [data-testid="stSidebar"] .st-emotion-cache-16idsys p,
+            [data-testid="stSidebar"] .st-emotion-cache-pkbazv,
+            [data-testid="stSidebar"] .st-emotion-cache-10trblm,
+            [data-testid="stSidebar"] .st-emotion-cache-16idsys {{
+                color: #ffffff !important;
+            }}
+            
+            [data-testid="stSidebar"] .stMarkdown p {{
+                color: #ffffff !important;
+            }}
+            
+            [data-testid="stSidebar"] h1,
+            [data-testid="stSidebar"] h2,
+            [data-testid="stSidebar"] h3 {{
+                color: #ffffff !important;
+            }}
+
+            /* Force white text in sidebar for all themes */
+            [data-testid="stSidebar"] {{
+                color: #ffffff !important;
+            }}
+            
+            [data-testid="stSidebar"] .st-emotion-cache-ue6h4q,
+            [data-testid="stSidebar"] .st-emotion-cache-16idsys p,
+            [data-testid="stSidebar"] .st-emotion-cache-pkbazv,
+            [data-testid="stSidebar"] .st-emotion-cache-10trblm,
+            [data-testid="stSidebar"] .st-emotion-cache-16idsys,
+            [data-testid="stSidebar"] .stMarkdown,
+            [data-testid="stSidebar"] .stSelectbox,
+            [data-testid="stSidebar"] .stMultiSelect,
+            [data-testid="stSidebar"] .stButton,
+            [data-testid="stSidebar"] label,
+            [data-testid="stSidebar"] .streamlit-expanderHeader {{
+                color: #ffffff !important;
+            }}
+
+            /* Sidebar headings */
+            [data-testid="stSidebar"] h1,
+            [data-testid="stSidebar"] h2,
+            [data-testid="stSidebar"] h3,
+            [data-testid="stSidebar"] h4,
+            [data-testid="stSidebar"] h5,
+            [data-testid="stSidebar"] h6 {{
+                color: #ffffff !important;
+            }}
+
+            /* Sidebar links */
+            [data-testid="stSidebar"] a {{
+                color: #ffffff !important;
+            }}
+
+            /* Sidebar input text */
+            [data-testid="stSidebar"] input,
+            [data-testid="stSidebar"] .stTextInput > div {{
+                color: #ffffff !important;
+            }}
+
+            /* Enhanced sidebar text visibility */
+            [data-testid="stSidebar"] {{
+                color: #ffffff !important;
+            }}
+
+            [data-testid="stSidebar"] .element-container,
+            [data-testid="stSidebar"] .streamlit-expanderHeader,
+            [data-testid="stSidebar"] .streamlit-expanderContent,
+            [data-testid="stSidebar"] .stMarkdown,
+            [data-testid="stSidebar"] label,
+            [data-testid="stSidebar"] .stSelectbox,
+            [data-testid="stSidebar"] .stMultiSelect {{
+                color: #ffffff !important;
             }}
             
             /* Main Header */
@@ -284,6 +392,36 @@ class ThemeManager:
                 background-clip: text;
                 text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
                 animation: headerGlow 3s ease-in-out infinite alternate;
+            }}
+
+            /* Enhanced metric text visibility */
+            .stMetric {{
+                color: var(--text-color) !important;
+            }}
+            
+            .stMetric [data-testid="stMetricValue"] {{
+                color: var(--text-color) !important;
+                font-weight: 600 !important;
+            }}
+            
+            .stMetric [data-testid="stMetricDelta"] {{
+                color: var(--text-color) !important;
+                font-weight: 500 !important;
+            }}
+            
+            /* Plot title and text enhancements */
+            .js-plotly-plot .plotly .gtitle,
+            .js-plotly-plot .plotly .xtitle,
+            .js-plotly-plot .plotly .ytitle,
+            .js-plotly-plot .plotly .legendtext {{
+                fill: var(--text-color) !important;
+                color: var(--text-color) !important;
+                font-weight: 600 !important;
+            }}
+            
+            .plot-container .main-svg text {{
+                fill: var(--text-color) !important;
+                color: var(--text-color) !important;
             }}
             
             @keyframes headerGlow {{
@@ -304,6 +442,36 @@ class ThemeManager:
                 overflow: hidden;
             }}
             
+            /* Ensure text visibility in sector cards */
+            .sector-card,
+            .activity-card {{
+                color: var(--text-color) !important;
+                text-shadow: 0 0 1px rgba(0,0,0,0.1) !important;
+            }}
+            
+            /* Enhance text visibility in visualization sections */
+            .visualization-section h3,
+            .visualization-section h4,
+            .visualization-section p {{
+                color: var(--text-color) !important;
+                text-shadow: 0 0 1px rgba(0,0,0,0.1) !important;
+            }}
+            
+            /* Ensure visibility of info and warning messages */
+            div[data-testid="stText"],
+            div[data-testid="stMarkdownContainer"] {{
+                color: var(--text-color) !important;
+                font-weight: 500 !important;
+            }}
+            
+            /* Enhanced metric text */
+            .metric-value,
+            .metric-label {{
+                color: var(--metric-text) !important;
+                text-shadow: 0 0 1px rgba(0,0,0,0.1) !important;
+                font-weight: 600 !important;
+            }}
+            
             .metric-card::before {{
                 content: '';
                 position: absolute;
@@ -320,232 +488,134 @@ class ThemeManager:
             }}
             
             .metric-card h2 {{
-                color: var(--primary-color);
+                color: var(--metric-text);
                 font-size: 2.5rem;
-                font-weight: bold;
+                font-weight: 800;
                 margin: 0.5rem 0;
-                text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
             }}
             
             .metric-card h3 {{
-                color: var(--text-color);
+                color: var(--metric-text);
                 font-size: 1.2rem;
+                font-weight: 600;
                 margin: 0;
-                opacity: 0.8;
+                opacity: 1;
+                text-shadow: 0px 0px 1px rgba(0,0,0,0.1);
             }}
             
             .metric-card p {{
-                color: var(--text-secondary);
+                color: var(--metric-text);
                 font-size: 0.9rem;
+                font-weight: 500;
                 margin: 0.5rem 0 0 0;
+                opacity: 0.95;
             }}
             
-            /* Sector Cards */
-            .sector-card {{
-                background: var(--gradient-primary);
-                color: white;
-                padding: 1.5rem;
-                border-radius: 1rem;
-                margin: 1rem 0;
-                cursor: pointer;
-                transition: all 0.3s ease;
-                box-shadow: var(--shadow);
-                position: relative;
-                overflow: hidden;
+            /* Chart Text Styling */
+            .st-emotion-cache-1inwz65 text,
+            .st-emotion-cache-1inwz65 .tick text,
+            .st-emotion-cache-1inwz65 .axis-label,
+            .st-emotion-cache-1inwz65 .legendtext,
+            .st-emotion-cache-1inwz65 .annotation-text {{
+                fill: var(--chart-text) !important;
+                font-weight: 600 !important;
+                color: var(--chart-text) !important;
+                text-shadow: 0 0 1px rgba(0,0,0,0.1) !important;
             }}
             
-            .sector-card::before {{
-                content: '';
-                position: absolute;
-                top: -50%;
-                left: -50%;
-                width: 200%;
-                height: 200%;
-                background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-                transform: rotate(45deg);
-                transition: all 0.5s;
-                opacity: 0;
+            .st-emotion-cache-1inwz65 .tick text {{
+                font-size: 11px !important;
             }}
             
-            .sector-card:hover::before {{
-                animation: shimmer 1s ease-in-out;
-                opacity: 1;
+            .st-emotion-cache-1inwz65 .axis-label {{
+                font-weight: 700 !important;
+                font-size: 13px !important;
             }}
             
-            @keyframes shimmer {{
-                0% {{ transform: translateX(-100%) translateY(-100%) rotate(45deg); }}
-                100% {{ transform: translateX(100%) translateY(100%) rotate(45deg); }}
+            /* Chart title and legend */
+            .st-emotion-cache-1inwz65 .gtitle,
+            .st-emotion-cache-1inwz65 .legend text {{
+                fill: var(--chart-text) !important;
+                font-weight: 700 !important;
+                font-size: 14px !important;
             }}
             
-            .sector-card:hover {{
-                transform: scale(1.05) rotateY(5deg);
-                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            /* Chart tooltips and hover text */
+            .st-emotion-cache-1inwz65 .tooltip text,
+            .st-emotion-cache-1inwz65 .hover text {{
+                fill: var(--chart-text) !important;
+                font-weight: 600 !important;
+                font-size: 12px !important;
+                text-shadow: 0 0 2px rgba(255,255,255,0.8) !important;
             }}
             
-            /* Risk Level Styling */
-            .risk-high {{
-                background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
-                color: #c62828;
-                border-left: 4px solid #d32f2f;
-            }}
-            
-            .risk-medium {{
-                background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
-                color: #ef6c00;
-                border-left: 4px solid #f57c00;
-            }}
-            
-            .risk-low {{
-                background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
-                color: #2e7d32;
-                border-left: 4px solid #388e3c;
-            }}
-            
-            /* Status Styling */
-            .status-open {{
-                background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
-                color: #c62828;
-                padding: 0.5rem 1rem;
-                border-radius: 2rem;
+            /* Ensure contrast for trend indicators */
+            .trend-indicator {{
+                color: var(--metric-text);
                 font-weight: bold;
-                display: inline-block;
-                margin: 0.2rem;
+                text-shadow: 0px 0px 2px rgba(0,0,0,0.1);
             }}
             
-            .status-closed {{
-                background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
-                color: #2e7d32;
-                padding: 0.5rem 1rem;
-                border-radius: 2rem;
+            /* Ensure contrast for compliance rates */
+            .compliance-rate {{
+                color: var(--metric-text);
                 font-weight: bold;
-                display: inline-block;
-                margin: 0.2rem;
+                text-shadow: 0px 0px 2px rgba(0,0,0,0.2);
             }}
             
-            /* Activity Badges */
-            .activity-badge {{
-                background: var(--gradient-secondary);
-                color: white;
-                padding: 0.5rem 1rem;
-                border-radius: 2rem;
-                font-size: 0.8rem;
-                margin: 0.2rem;
-                display: inline-block;
+            /* High contrast text overlays */
+            .metric-overlay {{
+                color: var(--metric-text);
                 font-weight: bold;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-                transition: all 0.2s ease;
+                padding: 4px 8px;
+                border-radius: 4px;
+                background: rgba(0, 0, 0, 0.1);
             }}
             
-            .activity-badge:hover {{
-                transform: scale(1.1);
-                box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            .dark .metric-overlay {{
+                background: rgba(255, 255, 255, 0.1);
             }}
             
-            /* Filter Section */
-            .filter-section {{
+            /* Chart container background */
+            .st-emotion-cache-1inwz65 {{
                 background: var(--surface-color);
-                padding: 2rem;
-                border-radius: 1rem;
-                border: 1px solid var(--border-color);
-                margin-bottom: 2rem;
-                box-shadow: var(--shadow);
-            }}
-            
-            /* Enhanced Buttons */
-            .stButton > button {{
-                background: var(--gradient-primary);
-                color: white;
-                border: none;
-                border-radius: 2rem;
-                padding: 0.75rem 2rem;
-                font-weight: bold;
-                transition: all 0.3s ease;
-                box-shadow: var(--shadow);
-            }}
-            
-            .stButton > button:hover {{
-                transform: translateY(-2px);
-                box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-                filter: brightness(1.1);
-            }}
-            
-            /* Enhanced Tabs */
-            .stTabs [data-baseweb="tab-list"] {{
-                gap: 5px;
-                background: var(--surface-color);
-                padding: 0.5rem;
-                border-radius: 1rem;
-                box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
-            }}
-            
-            .stTabs [data-baseweb="tab"] {{
-                height: 60px;
-                padding: 0 2rem;
-                background: transparent;
-                border-radius: 0.8rem;
-                font-weight: bold;
-                transition: all 0.3s ease;
-                color: var(--text-secondary);
-            }}
-            
-            .stTabs [aria-selected="true"] {{
-                background: var(--gradient-primary);
-                color: white;
-                box-shadow: var(--shadow);
-                transform: translateY(-2px);
-            }}
-            
-            /* Enhanced Selectbox */
-            .stSelectbox > div > div {{
-                background: var(--surface-color);
-                border: 1px solid var(--border-color);
-                border-radius: 0.5rem;
-                color: var(--text-color);
-            }}
-            
-            /* Enhanced Multiselect */
-            .stMultiSelect > div > div {{
-                background: var(--surface-color);
-                border: 1px solid var(--border-color);
-                border-radius: 0.5rem;
-                color: var(--text-color);
-            }}
-            
-            /* Enhanced Dataframe */
-            .stDataFrame {{
-                border-radius: 1rem;
-                overflow: hidden;
-                box-shadow: var(--shadow);
-            }}
-            
-            /* Loading Spinner */
-            .stSpinner > div {{
-                border-top-color: var(--primary-color) !important;
-            }}
-            
-            /* Success/Warning/Error Messages */
-            .stSuccess {{
-                background: var(--gradient-success);
-                color: white;
-                border-radius: 0.5rem;
                 padding: 1rem;
-                box-shadow: var(--shadow);
+                border-radius: 8px;
+                border: 1px solid var(--border-color);
             }}
-            
-            .stWarning {{
-                background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
-                color: #ef6c00;
-                border-radius: 0.5rem;
-                padding: 1rem;
-                box-shadow: var(--shadow);
+
+            /* Enhanced plot text visibility */
+            .plot-container text,
+            .plot-container .xtick text,
+            .plot-container .ytick text,
+            .plot-container .legend text,
+            .plot-container .annotation-text {{
+                fill: var(--text-color) !important;
+                color: var(--text-color) !important;
+                font-weight: 600 !important;
             }}
-            
-            .stError {{
-                background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
-                color: #c62828;
-                border-radius: 0.5rem;
-                padding: 1rem;
-                box-shadow: var(--shadow);
+
+            /* Risk metrics and percentages */
+            .risk-metric,
+            .percentage-value,
+            .metric-value {{
+                color: var(--text-color) !important;
+                font-weight: 600 !important;
+            }}
+
+            /* Distribution plot text */
+            .distribution-plot text,
+            .distribution-plot .legend text {{
+                fill: var(--text-color) !important;
+                color: var(--text-color) !important;
+                font-weight: 600 !important;
+            }}
+
+            /* General visualization text */
+            [data-testid="stText"],
+            [data-testid="stMarkdown"] {{
+                color: var(--text-color) !important;
             }}
             
             /* Animated Elements */
@@ -583,10 +653,6 @@ class ThemeManager:
                 .metric-card {{
                     padding: 1rem;
                 }}
-                
-                .sector-card {{
-                    padding: 1rem;
-                }}
             }}
             
             /* Custom Scrollbar */
@@ -605,6 +671,44 @@ class ThemeManager:
             
             ::-webkit-scrollbar-thumb:hover {{
                 background: var(--secondary-color);
+            }}
+
+            /* Enhance table text visibility */
+            .dataframe thead th,
+            .dataframe tbody td {{
+                color: var(--text-color) !important;
+                font-weight: 500 !important;
+            }}
+
+            /* Ensure text visibility in expandable sections */
+            .streamlit-expanderHeader,
+            .streamlit-expanderContent {{
+                color: var(--text-color) !important;
+                font-weight: 500 !important;
+            }}
+
+            /* Status messages and alerts */
+            .status-message,
+            .alert-box {{
+                color: var(--text-color) !important;
+                font-weight: 500 !important;
+                text-shadow: 0 0 1px rgba(0,0,0,0.1) !important;
+            }}
+
+            /* Sector and category labels */
+            .sector-label,
+            .category-label {{
+                color: var(--text-color) !important;
+                font-weight: 600 !important;
+            }}
+
+            /* Info boxes and tooltips */
+            .info-box,
+            .tooltip-content {{
+                color: var(--text-color) !important;
+                background-color: var(--surface-color) !important;
+                border: 1px solid var(--border-color) !important;
+                font-weight: 500 !important;
             }}
         </style>
         """
