@@ -11,11 +11,12 @@ class ThemeManager:
     """Advanced theme management system"""
     
     def __init__(self):
+        """Initialize theme manager with light and dark themes"""
         self.themes = {
             'light': {
                 'name': 'Light Theme',
                 'icon': '☀️',
-                'primary_color': '#1f77b4',
+                'primary_color': "#1489dd",
                 'secondary_color': '#ff7f0e',
                 'success_color': '#2ca02c',
                 'warning_color': '#d62728',
@@ -39,12 +40,12 @@ class ThemeManager:
                 'gradient_secondary': 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
                 'gradient_success': 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
                 'card_bg': 'linear-gradient(135deg, #f0f2f6 0%, #e8ecf0 100%)',
-                'sidebar_bg': '#f8f9fa'
+                'sidebar_bg': '#000000'
             },
             'dark': {
                 'name': 'Dark Theme',
                 'icon': '🌙',
-                'primary_color': '#4dabf7',
+                'primary_color': "#137dd3",
                 'secondary_color': '#ffa726',
                 'success_color': '#66bb6a',
                 'warning_color': '#ef5350',
@@ -68,7 +69,7 @@ class ThemeManager:
                 'gradient_secondary': 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
                 'gradient_success': 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
                 'card_bg': 'linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%)',
-                'sidebar_bg': '#1a1a1a'
+                'sidebar_bg': '#000000'
             }
         }
         
@@ -91,8 +92,20 @@ class ThemeManager:
         st.sidebar.markdown("### 🎨 اختيار المظهر")
         
         current_theme = st.session_state.current_theme
-        theme_options = {name: f"{config['icon']} {config['name']}" 
+        theme_options = {name: f"{config['icon']} {config['name']}"
                         for name, config in self.themes.items()}
+        
+        # Add custom styles to ensure text visibility
+        st.markdown("""
+            <style>
+                div[data-testid="stSelectbox"] label {
+                    color: #ffffff !important;
+                }
+                div[data-testid="stSelectbox"] div[data-baseweb="select"] {
+                    color: #ffffff !important;
+                }
+            </style>
+        """, unsafe_allow_html=True)
         
         selected_theme = st.sidebar.selectbox(
             "اختر المظهر",
@@ -252,22 +265,52 @@ class ThemeManager:
             }}
             
             /* Sidebar Styling */
-            .css-1d391kg {{
-                background-color: var(--sidebar-bg);
+            .css-1d391kg,
+            .css-1544g2n,
+            .css-1avcm0n,
+            .css-14xtw13,
+            .css-1nm2qww,
+            .css-zt5igj,
+            .css-1vq4p4l,
+            .css-1oe5cao,
+            [data-testid="stSidebar"],
+            [data-testid="stSidebarNav"] {{
+                background-color: #000000 !important;
             }}
 
-            /* Enhanced sidebar text visibility */
-            [data-testid="stSidebar"] {{
-                color: #ffffff !important;
-            }}
-
+            /* Force white text in sidebar for all modes */
+            [data-testid="stSidebar"],
+            [data-testid="stSidebar"] *,
             [data-testid="stSidebar"] .element-container,
             [data-testid="stSidebar"] .streamlit-expanderHeader,
             [data-testid="stSidebar"] .streamlit-expanderContent,
             [data-testid="stSidebar"] .stMarkdown,
             [data-testid="stSidebar"] label,
             [data-testid="stSidebar"] .stSelectbox,
-            [data-testid="stSidebar"] .stMultiSelect {{
+            [data-testid="stSidebar"] .stMultiSelect,
+            [data-testid="stSidebar"] p,
+            [data-testid="stSidebar"] span,
+            [data-testid="stSidebar"] div,
+            [data-testid="stSidebar"] h1,
+            [data-testid="stSidebar"] h2,
+            [data-testid="stSidebar"] h3,
+            [data-testid="stSidebar"] h4,
+            [data-testid="stSidebar"] h5,
+            [data-testid="stSidebar"] h6,
+            [data-testid="stSidebar"] button,
+            [data-testid="stSidebar"] input,
+            [data-testid="stSidebar"] select,
+            [data-testid="stSidebar"] .stTextInput > div > div > input {{
+                color: #ffffff !important;
+            }}
+
+            /* Additional sidebar text color overrides */
+            .sidebar .stMarkdown,
+            .sidebar .stText,
+            .sidebar label,
+            .sidebar-content,
+            [data-testid="stSidebarNav"],
+            [data-testid="baseButton-headerNoPadding"] {{
                 color: #ffffff !important;
             }}
             

@@ -96,9 +96,9 @@ class UltimateDashboard:
         
         st.sidebar.markdown("---")
         st.sidebar.markdown(f"""
-        <div style='text-align: center; padding: 0.5rem; background: {theme['surface_color']}; 
-                    border-radius: 8px; margin-bottom: 1rem;'>
-            <h3 style='margin: 0; color: {theme['primary_color']};'>🔍 المرشحات المتقدمة</h3>
+        <div style='text-align: center; padding: 0.5rem; background: {theme['primary_color']}15; 
+                    border-radius: 8px; margin-bottom: 1rem; border: 1px solid {theme['primary_color']}25;'>
+            <h3 style='margin: 0; color: {theme['primary_color']}; font-weight: bold; text-shadow: 0 0 1px {theme["primary_color"]}30;'>🔍 المرشحات المتقدمة</h3>
         </div>
         """, unsafe_allow_html=True)
 
