@@ -2,7 +2,7 @@
 Gemini AI Chatbot Integration
 Intelligent chatbot for safety and compliance data analysis using Google's Gemini API
 """
-import dotenv
+from dotenv import load_dotenv, get_key
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -16,7 +16,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Gemini API configuration
-GEMINI_API_KEY = dotenv.get_key('.env', 'GEMINI_API_KEY')  # Load from .env file
+GEMINI_API_KEY = get_key('.env', 'GEMINI_API_KEY')  # Load from .env file
 GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent'
 
 # Note: In production, you would use the actual Google Gemini API
